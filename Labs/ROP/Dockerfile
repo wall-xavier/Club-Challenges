@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Install Socat and GCC
-RUN apt-get update && apt-get install build-essential python3 pip python3-venv -y
+RUN apt-get update && apt-get install build-essential python3 pip python3-venv nano wget -y
 
 # Make Source Directory
 RUN mkdir /usr/src/ROP/
@@ -28,6 +28,9 @@ USER Intern
 
 #Change Working Directory
 WORKDIR /home/Intern/
+
+#Make directory for venv
+RUN mkdir .venv/
 
 #Copy README into Intern home
 COPY README.md .
