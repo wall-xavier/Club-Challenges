@@ -22,6 +22,32 @@ The goal of this lab is to give students an introduction into binary exploitatio
 
 ## Lab Guide
 
+### Scope
+
+
+
+### Getting Started
+
+Before we begin our lab, let's ensure we have everything that we need to be successful. If you haven't already visited [Docker Setup](https://weber-cyber-club.github.io/extradocs/docker/docker-setup/), to get Docker installed and set up for labs. If you are confident in your Docker skills, don't even worry, just keep going through the lab.
+
+Now with Docker installed, let's begin checking and installing the dependencies that we will need for this demonstration. For this lab we are going to need Pyhton 3 and PWNTools, both of which should already be installed on your system.
+
+To check if Python 3 exists just run:
+
+  python3 --version
+
+As long as a version appears, you have Python 3 on your system already! If, for some reason, you did not have Python 3 installed, just run:
+
+  # Ensures your repository indexes are current
+   sudo apt update
+
+  # Installs Python 3
+
+  sudo apt install python3
+
+
+
+
 ## Questions
 
 ## Conclusion
