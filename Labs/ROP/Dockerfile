@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install build-essential python3 pip python3-venv n
 RUN mkdir /usr/src/ROP/
 
 # Copy In Source Code
-COPY ROP.c /usr/src/ROP/ROP.c
+COPY Assets/ROP.c /usr/src/ROP/ROP.c
 
 # Move flag in to root of the file system
-COPY flag.txt /root/flag.txt
+COPY Assets/flag.txt /root/flag.txt
 
 # Compile Source Code
 RUN gcc /usr/src/ROP/ROP.c -o /usr/bin/ROP -Wall -Wextra -std=gnu99 -Wno-deprecated-declarations -fno-stack-protector -no-pie -fno-pic
@@ -31,9 +31,6 @@ WORKDIR /home/Intern/
 
 # Make directory for venv
 RUN mkdir .venv/
-
-# Copy README into Intern home
-COPY README.md .
 
 # Run Default Command
 CMD ["/bin/bash"]
